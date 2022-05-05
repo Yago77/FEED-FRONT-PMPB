@@ -193,7 +193,7 @@ body() {
                                 icon: Icon(Icons.thumb_up_outlined),
                                 onPressed: () {}),
                             IconButton(
-                                icon: Icon(Icons.comment_rounded),
+                                icon: Icon(Icons.comment_outlined),
                                 onPressed: () {}),
                             IconButton(
                                 icon: Icon(Icons.bookmark_border),
@@ -264,7 +264,7 @@ body() {
                                 icon: Icon(Icons.thumb_up_outlined),
                                 onPressed: () {}),
                             IconButton(
-                                icon: Icon(Icons.comment_rounded),
+                                icon: Icon(Icons.comment_outlined),
                                 onPressed: () {}),
                             IconButton(
                                 icon: Icon(Icons.bookmark_border),
