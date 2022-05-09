@@ -94,11 +94,16 @@ body() {
                             child:
                                 Image.asset("images/police.png", height: 40)),
                         Container(
-                          margin: EdgeInsets.only(left: 13),
-                          child: Text("Policial Santos",
-                              style: TextStyle(
-                                  fontSize: 17, fontWeight: FontWeight.bold)),
-                        ),
+                            margin: EdgeInsets.all(10),
+                            child: Text.rich(TextSpan(children: <TextSpan>[
+                              TextSpan(
+                                  text: "Policial Santos\n",
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.bold)),
+                              TextSpan(
+                                  text: "Há 13min",
+                                  style: TextStyle(fontSize: 10))
+                            ]))),
                       ],
                     ),
                     Column(
@@ -106,16 +111,13 @@ body() {
                         Row(
                           children: [
                             Container(
-                                margin: EdgeInsets.fromLTRB(15, 20, 0, 10),
-                                child: Text("Lorem ipsum dolor sit amet.",
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold)))
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Expanded(child: Image.asset("images/policial.png")),
+                                margin: EdgeInsets.fromLTRB(25, 12, 0, 0),
+                                child: Text(
+                                  "Adolescentes são abordados com maconha",
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold),
+                                )),
                           ],
                         ),
                         Row(
@@ -124,7 +126,7 @@ body() {
                                 child: Container(
                               margin: EdgeInsets.all(7),
                               child: Text(
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor eros id sem suscipit.",
+                                "Suspeitos foram encontrados com maconha nas redondezas do Mangabeira.",
                                 style: TextStyle(fontSize: 15),
                                 textAlign: TextAlign.justify,
                               ),
@@ -133,14 +135,8 @@ body() {
                         ),
                         Row(
                           children: [
-                            Container(
-                                margin: EdgeInsets.only(left: 9),
-                                child: Text("Há 15min",
-                                    style: TextStyle(fontSize: 11)))
+                            Expanded(child: Image.asset("images/policial.png")),
                           ],
-                        ),
-                        Row(
-                          children: [],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -168,6 +164,52 @@ body() {
                             IconButton(
                                 icon: Icon(Icons.share), onPressed: () {}),
                           ],
+                        ),
+                        Card(
+                          color: Colors.grey.shade300,
+                          child: Row(
+                            children: [
+                              IconButton(
+                                  icon: Icon(Icons.account_circle),
+                                  onPressed: () {}),
+                              Column(
+                                children: [
+                                  Text.rich(TextSpan(children: <TextSpan>[
+                                    TextSpan(
+                                        text: "Marcos\n",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)),
+                                    TextSpan(
+                                      text: "Essa juventude está perdida!",
+                                    )
+                                  ]))
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                        Card(
+                          color: Colors.grey.shade300,
+                          child: Row(
+                            children: [
+                              IconButton(
+                                  icon: Icon(Icons.account_circle),
+                                  onPressed: () {}),
+                              Column(
+                                children: [
+                                  Text.rich(TextSpan(children: <TextSpan>[
+                                    TextSpan(
+                                        text: "Pedro\n",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold)),
+                                    TextSpan(
+                                      text: "Parabéns Senhores !",
+                                    )
+                                  ]))
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       ],
                     ),
