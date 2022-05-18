@@ -1,6 +1,5 @@
 import 'package:flutter_application_1/nova_publi.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class Home extends StatefulWidget {
@@ -18,9 +17,10 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: AppBarTheme(
-          color: Colors.red.shade800,
+          color: Colors.red.shade800
         ),
       ),
       home: Scaffold(
@@ -35,8 +35,6 @@ class _HomeState extends State<Home> {
 
   buildAppBar() {
     return AppBar(
-      systemOverlayStyle:
-          SystemUiOverlayStyle(statusBarColor: Colors.red.shade800),
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -439,16 +437,16 @@ class _HomeState extends State<Home> {
       items: [
         BottomNavigationBarItem(
             icon: Icon(
+              Icons.home,
+              color: Colors.black,
+            ),
+            label: "Feed"),
+        BottomNavigationBarItem(
+            icon: Icon(
               Icons.person,
               color: Colors.black,
             ),
             label: "Perfil"),
-        BottomNavigationBarItem(
-            icon: Icon(
-              Icons.search,
-              color: Colors.black,
-            ),
-            label: "Procurar"),
         BottomNavigationBarItem(
             icon: Icon(
               Icons.groups_rounded,

@@ -1,5 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/main.dart';
+import 'package:flutter/services.dart';
+
+import 'package:image_picker/image_picker.dart';
+import 'package:flutter_application_1/previa.dart';
 
 class novaPubli extends StatefulWidget {
   const novaPubli({Key? key}) : super(key: key);
@@ -12,20 +17,23 @@ class _novaPubliState extends State<novaPubli> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-     backgroundColor: Colors.grey.shade300,
+        backgroundColor: Colors.grey.shade300,
         appBar: AppBar(
-            backgroundColor: Colors.redAccent.shade700,
+            backgroundColor: Colors.red.shade800,
             title: Row(
               children: [
                 Image.asset(
                   'images/brasao.png',
-                  fit: BoxFit.contain,
                   height: 40,
                 ),
-                Text(
-                  "    Nova publicação",
-                  style: TextStyle(color: Colors.black),
+                Container(
+                  margin: EdgeInsets.only(left: 65),
+                  child: Text(
+                    "Nova publicação",
+                    style: TextStyle(color: Colors.black),
+                  ),
                 ),
               ],
             )),
@@ -89,10 +97,12 @@ class _novaPubliState extends State<novaPubli> {
           ),
         ),
         bottomNavigationBar: Material(
-          color: Colors.red.shade700,
+          color: Colors.red.shade800,
           child: InkWell(
             onTap: () {
-              //print('called on tap');
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return Previa();
+              }));
             },
             child: SizedBox(
                 height: 56,
@@ -102,7 +112,7 @@ class _novaPubliState extends State<novaPubli> {
                   children: [
                     Icon(Icons.perm_media_outlined),
                     Text(
-                      '  Adicionar foto/vídeo',
+                      " Postar com imagem",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
@@ -112,7 +122,7 @@ class _novaPubliState extends State<novaPubli> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.red.shade700,
+          backgroundColor: Colors.red.shade800,
           onPressed: () {},
           child: Icon(
             Icons.check,
