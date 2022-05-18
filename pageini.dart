@@ -84,14 +84,16 @@ class _HomeState extends State<Home> {
                         children: [
                           Row(
                             children: [
-                              Container(
-                                  margin: EdgeInsets.fromLTRB(25, 12, 0, 0),
-                                  child: Text(
-                                    "Adolescentes são abordados com maconha",
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold),
-                                  )),
+                              Expanded(
+                                child: Container(
+                                    margin: EdgeInsets.fromLTRB(25, 12, 0, 0),
+                                    child: Text(
+                                      "Adolescentes são abordados com maconha",
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold),
+                                    )),
+                              ),
                             ],
                           ),
                           Row(
