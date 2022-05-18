@@ -25,7 +25,6 @@ class _PreviaState extends State<Previa> {
 
       final imageTemporaria = File(image.path);
       setState(() => this.image = imageTemporaria);
-      
     } on PlatformException catch (e) {
       print('Failed: $e');
     }
@@ -70,7 +69,7 @@ class _PreviaState extends State<Previa> {
               size: 35,
             ),
             onPressed: () {
-               Navigator.push(context, MaterialPageRoute(builder: (context) {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return Home();
               }));
             },
@@ -188,7 +187,8 @@ class _PreviaState extends State<Previa> {
   buildFloatingActionButton() {
     return FloatingActionButton(
       backgroundColor: Colors.red.shade700,
-      onPressed: () {},
+      onPressed: () {
+      },
       child: Icon(
         Icons.check,
         color: Colors.black,

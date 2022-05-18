@@ -2,6 +2,8 @@ import 'package:flutter_application_1/nova_publi.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+import 'perfil.dart';
+
 class Home extends StatefulWidget {
   Home({Key? key}) : super(key: key);
 
@@ -431,10 +433,9 @@ class _HomeState extends State<Home> {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       backgroundColor: Colors.red.shade800,
-      selectedFontSize: 15,
-      selectedItemColor: Colors.grey.shade300,
-      unselectedItemColor: Colors.black,
       currentIndex: currentIndex,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
       onTap: (index) => setState(() => currentIndex = index),
       items: [
         BottomNavigationBarItem(
@@ -442,11 +443,15 @@ class _HomeState extends State<Home> {
               Icons.home,
               color: Colors.black,
             ),
-            label: "Feed"),
+            label: "Página Inicial"),
         BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
-              color: Colors.black,
+            icon: IconButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Perfil();
+                }));
+              },
+              icon: Icon(Icons.person),
             ),
             label: "Perfil"),
         BottomNavigationBarItem(

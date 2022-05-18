@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pageini.dart';
-
+import 'package:flutter_application_1/perfil.dart';
 
 
 main() => runApp(MainApp());
